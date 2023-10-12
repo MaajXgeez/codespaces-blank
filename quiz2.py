@@ -173,3 +173,4 @@ index_6 = shopping_cart[6]
 print("Value at index 3:", index_3)
 print("Value at index 4:", index_4)
 print("Value at index 6:", index_6)
+                                            `````````````qqqqqazszxzxszasawqqazzxsq12334`
