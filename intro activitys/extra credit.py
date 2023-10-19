@@ -47,9 +47,10 @@ else:
         multiplied = num * 3
         result.append(multiplied)
     return result
-
+  
 # List of numbers
-list_of_numbers = [100, 20, 34, 45, 75, 9, 60]
+li\
+    st_of_numbers = [100, 20, 34, 45, 75, 9, 60]
 
 # Call the function and print the result
 result_list = multiply_by_three(list_of_numbers)
@@ -74,3 +75,4 @@ if is_palindrome(user_input):
     print(f"{user_input} is a palindrome.")
 else:
     print(f"{user_input} is not a palindrome.")
+
