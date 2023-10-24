@@ -9,7 +9,9 @@ For example, if you want to print the numbers from 1 to 5, you can use a for loo
 ```python
 for i in range(1, 6):
     print(i)
-```
+
+
+
 
 In this code, `i` is the control variable that takes on values from 1 to 5 (inclusive), and the `print` statement is executed during each iteration of the loop. This loop simplifies the process of performing the same action for multiple values or elements, making your code more efficient and concise.
 
