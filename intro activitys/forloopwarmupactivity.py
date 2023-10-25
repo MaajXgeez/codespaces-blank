@@ -32,3 +32,4 @@ names = ['Michael', 'Rebecca', 'William', 'Kareem', 'Robert', 'Rose', 'Jason']
 for name in names:
     if name.startswith('R'):
         print(name)
+
