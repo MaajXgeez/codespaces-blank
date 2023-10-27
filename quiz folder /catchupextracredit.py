@@ -54,6 +54,24 @@ Following these naming rules ensures that your variables are easy to understand 
 # Else if they are in grades 11 or 12, the message should be the following:
 # Welcome “student name” to Advance Placement Python’ class
 
+
+def welcome_message():
+    name = input("Enter your name: ")
+    grade = int(input("Enter your grade: "))
+
+    if grade in [9, 10]:
+        message = f"Welcome {name} to 'Introduction to Python' class."
+    elif grade in [11, 12]:
+        message = f"Welcome {name} to 'Advance Placement Python' class."
+    else:
+        message = f"Sorry, we don't have a Python class for your grade."
+
+    return message
+
+# Call the function to display the welcome message
+print(welcome_message())
+
+
 # 5. Write a program that will apply a discount to a person's purchase, 
 # only if they are a member of the store’s club. Your function should allow a user to 
 # enter a product name and product price. The product price should be entered as a float. 
@@ -62,6 +80,11 @@ Following these naming rules ensures that your variables are easy to understand 
 # ask the user if they would like to become a member. If the user enters yes, they will receive a 
 # 10% discount on their product. If the user enters no, they do not want to become a member, your program 
 # should return the regular price of the item. 
+
+
+def apply_discount():
+    product_name = input
+
 
 # 6. Create a program that will loop through an array of lists to find all the users who are members of the math club. 
 # Use the following array of lists below:
@@ -74,5 +97,75 @@ robert=['robert','11','math club']
 
 students=[john, jennie, april,may, robert]
 
+
+# Define the list of students
+john = ['john', '10th grade', 'math club']
+jennie = ['jennie', '11th grade', 'basketball']
+april = ['april', '12th grade', 'football']
+may = ['may', '9th grade', 'math club']
+robert = ['robert', '11', 'math club']
+
+students = [john, jennie, april, may, robert]
+
+# Initialize an empty list to store math club members
+math_club_members = []
+
+# Loop through the students and check if they are in the math club
+for student in students:
+    if 'math club' in student:
+        math_club_members.append(student[0])
+
+# Display the list of math club members
+print("Math Club Members:")
+for member in math_club_members:
+    print(member)
+
+
 # 7. Create a program that uses a combination of at least three (3) concepts 
 # we've learned about in class.
+
+# Initialize an empty list to store tasks
+tasks = []
+
+# Main menu for task management
+while True:
+    print("Task Manager Menu:")
+    print("1. Add a task")
+    print("2. List tasks")
+    print("3. Mark task as complete")
+    print("4. Quit")
+    
+    choice = input("Enter your choice (1/2/3/4): ")
+    
+    if choice == "1":
+        task_name = input("Enter the task name: ")
+        task = {"name": task_name, "completed": False}
+        tasks.append(task)
+        print(f"Task '{task_name}' added to the list.")
+    
+    elif choice == "2":
+        if not tasks:
+            print("No tasks in the list.")
+        else:
+            print("Tasks:")
+            for index, task in enumerate(tasks, start=1):
+                status = "Completed" if task["completed"] else "Incomplete"
+                print(f"{index}. {task['name']} - {status}")
+    
+    elif choice == "3":
+        if not tasks:
+            print("No tasks to mark as complete.")
+        else:
+            task_index = int(input("Enter the task number to mark as complete: ")) - 1
+            if 0 <= task_index < len(tasks):
+                tasks[task_index]["completed"] = True
+                print(f"Task '{tasks[task_index]['name']}' marked as complete.")
+            else:
+                print("Invalid task number.")
+    
+    elif choice == "4":
+        print("Task Manager is quitting. Goodbye!")
+        break
+
+    else:
+        print("Invalid choice. Please choose a valid option (1/2/3/4).")
