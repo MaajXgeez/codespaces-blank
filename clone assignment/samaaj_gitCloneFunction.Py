@@ -1,6 +1,4 @@
-import os
-
-def create_folder_and_calculate_sum(folder_name, numbers):
+1 def create_folder_and_calculate_sum(folder_name, numbers):
     # Create a new folder
     try:
         os.mkdir(folder_name)
@@ -16,3 +14,9 @@ def create_folder_and_calculate_sum(folder_name, numbers):
 folder_name = "cloneAssignment"
 number_list = [1, 2, 3, 4, 5]
 create_folder_and_calculate_sum(folder_name, number_list)
+
+2 food=['apple','onion','watermelon','green bean','pear']
+
+
+for i in range(len(food)):
+ print(food[i])
